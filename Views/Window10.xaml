@@ -1,0 +1,372 @@
+﻿<Window x:Class="TaskHive.Views.Window10"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskHive.Views"
+        mc:Ignorable="d"
+        Title="Window1" Height="550" Width="800" WindowState="Maximized">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Top" Grid.Row="0" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+
+            <ToolBar Name="toolbar1" Height="35" Grid.Row="0" Background="red"/>
+
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <TextBox x:Name="Date1" Text="2026" Width="200" Height="35" TextAlignment="Center" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" PreviewTextInput="Date1_PreviewTextInput" KeyDown="Date1_KeyDown"/>
+            </StackPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" >
+                <RadioButton x:Name="M1" Content="January" Margin="15,0,0,0" FontSize="20" Tag="1" Checked="M1_Checked"/>
+                <RadioButton x:Name="M2" Content="February" Margin="15,0,0,0" FontSize="20" Tag="2" Checked="M2_Checked"/>
+                <RadioButton x:Name="M3" Content="March" Margin="15,0,0,0" FontSize="20" Tag="3" Checked="M3_Checked"/>
+                <RadioButton x:Name="M4" Content="April" Margin="15,0,0,0" FontSize="20" Tag="4" Checked="M4_Checked"/>
+                <RadioButton x:Name="M5" Content="May" Margin="15,0,0,0" FontSize="20" Tag="5" Checked="M5_Checked"/>
+                <RadioButton x:Name="M6" Content="June" Margin="15,0,0,0" FontSize="20" Tag="6" Checked="M6_Checked"/>
+                <RadioButton x:Name="M7" Content="July" Margin="15,0,0,0" FontSize="20" Tag="7" Checked="M7_Checked"/>
+                <RadioButton x:Name="M8" Content="August" Margin="15,0,0,0" FontSize="20" Tag="8" Checked="M8_Checked"/>
+                <RadioButton x:Name="M9" Content="September" Margin="15,0,0,0" FontSize="20" Tag="9" Checked="M9_Checked"/>
+                <RadioButton x:Name="M10" Content="October" Margin="15,0,0,0" FontSize="20" Tag="10" Checked="M10_Checked"/>
+                <RadioButton x:Name="M11" Content="November" Margin="15,0,0,0" FontSize="20" Tag="11" Checked="M11_Checked"/>
+                <RadioButton x:Name="M12" Content="December" Margin="15,0,0,0" FontSize="20" Tag="12" Checked="M12_Checked"/>
+            </WrapPanel>
+            
+        </Grid>
+
+
+        <Grid x:Name="Middle" Grid.Row="1" >
+
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="0" >
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w1" Content="Mon"  Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTMon" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="1" >
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w2" Content="Tue" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTTue" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="2">
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w3" Content="Wed" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTWed" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="3">
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w4" Content="Thu" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTThu" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="4">
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w5" Content="Fri" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTFri" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="5">
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w6" Content="Sat" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTSat" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+            
+            <Grid Background="Black" Grid.Row="0" Grid.Column="6">
+                <StackPanel Orientation="Vertical">
+                    <Label x:Name="w7" Content="Sun" Foreground="Gray" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="LTSun" Text="00:00" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" />
+                </StackPanel>
+            </Grid>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="1" Grid.RowSpan="7"/>
+
+
+            <Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+            <StackPanel x:Name="sp1" Orientation="Vertical" Grid.Row="1" Grid.Column="0" >
+                <TextBlock x:Name="CA1" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB1"  Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB1_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp2" Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                <TextBlock x:Name="CA2" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB2" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB2_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp3" Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                <TextBlock x:Name="CA3" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB3" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB3_Click"/>
+                
+            </StackPanel>
+
+            <StackPanel x:Name="sp4" Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                <TextBlock x:Name="CA4" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB4" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB4_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp5" Orientation="Vertical" Grid.Row="1" Grid.Column="4">
+                <TextBlock x:Name="CA5" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB5" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB5_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp6" Orientation="Vertical" Grid.Row="1" Grid.Column="5">
+                <TextBlock x:Name="CA6" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB6" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB6_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp7" Orientation="Vertical" Grid.Row="1" Grid.Column="6">
+                <TextBlock x:Name="CA7" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB7" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB7_Click"/>
+            </StackPanel>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="2" Grid.RowSpan="7"/>
+
+
+            <Separator Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+
+            <StackPanel x:Name="sp8" Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+                <TextBlock x:Name="CA8" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB8" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB8_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp9" Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                <TextBlock x:Name="CA9" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB9" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB9_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp10" Orientation="Vertical" Grid.Row="2" Grid.Column="2">
+                <TextBlock x:Name="CA10" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB10" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB10_Click"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="sp11" Orientation="Vertical" Grid.Row="2" Grid.Column="3">
+                <TextBlock x:Name="CA11" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB11" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB11_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp12" Orientation="Vertical" Grid.Row="2" Grid.Column="4">
+                <TextBlock x:Name="CA12" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB12" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB12_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp13" Orientation="Vertical" Grid.Row="2" Grid.Column="5">
+                <TextBlock x:Name="CA13" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB13" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB13_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp14" Orientation="Vertical" Grid.Row="2" Grid.Column="6">
+                <TextBlock x:Name="CA14" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB14" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB14_Click"/>
+            </StackPanel>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="3" Grid.RowSpan="7"/>
+            
+            <Separator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+
+            <StackPanel x:Name="sp15" Orientation="Vertical" Grid.Row="3" Grid.Column="0">
+                <TextBlock x:Name="CA15" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB15" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB15_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp16" Orientation="Vertical" Grid.Row="3" Grid.Column="1">
+                <TextBlock x:Name="CA16" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB16" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB16_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp17" Orientation="Vertical" Grid.Row="3" Grid.Column="2">
+                <TextBlock x:Name="CA17" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB17" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB17_Click"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="sp18" Orientation="Vertical" Grid.Row="3" Grid.Column="3">
+                <TextBlock x:Name="CA18" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB18" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB18_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp19" Orientation="Vertical" Grid.Row="3" Grid.Column="4">
+                <TextBlock x:Name="CA19" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB19" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB19_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp20" Orientation="Vertical" Grid.Row="3" Grid.Column="5">
+                <TextBlock x:Name="CA20" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB20" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB20_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp21" Orientation="Vertical" Grid.Row="3" Grid.Column="6">
+                <TextBlock x:Name="CA21" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB21" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB21_Click"/>
+            </StackPanel>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="4" Grid.RowSpan="7"/>
+
+            <Separator Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+            <StackPanel x:Name="sp22" Orientation="Vertical" Grid.Row="4" Grid.Column="0">
+                <TextBlock x:Name="CA22" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB22" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB22_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp23" Orientation="Vertical" Grid.Row="4" Grid.Column="1">
+                <TextBlock x:Name="CA23" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB23" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB23_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp24" Orientation="Vertical" Grid.Row="4" Grid.Column="2">
+                <TextBlock x:Name="CA24" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB24" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB24_Click"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="sp25" Orientation="Vertical" Grid.Row="4" Grid.Column="3">
+                <TextBlock x:Name="CA25" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB25" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB25_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp26" Orientation="Vertical" Grid.Row="4" Grid.Column="4">
+                <TextBlock x:Name="CA26" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB26" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB26_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp27" Orientation="Vertical" Grid.Row="4" Grid.Column="5">
+                <TextBlock x:Name="CA27" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB27" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB27_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp28" Orientation="Vertical" Grid.Row="4" Grid.Column="6">
+                <TextBlock x:Name="CA28" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB28" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB28_Click"/>
+            </StackPanel>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="5" Grid.RowSpan="7"/>
+          
+            <Separator Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+
+            <StackPanel x:Name="sp29" Orientation="Vertical" Grid.Row="5" Grid.Column="0">
+                <TextBlock x:Name="CA29" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB29" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB29_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp30" Orientation="Vertical" Grid.Row="5" Grid.Column="1">
+                <TextBlock x:Name="CA30" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB30" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB30_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp31" Orientation="Vertical" Grid.Row="5" Grid.Column="2">
+                <TextBlock x:Name="CA31" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB31" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB31_Click"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="sp32" Orientation="Vertical" Grid.Row="5" Grid.Column="3">
+                <TextBlock x:Name="CA32" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB32" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB32_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp33" Orientation="Vertical" Grid.Row="5" Grid.Column="4">
+                <TextBlock x:Name="CA33" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB33" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB33_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp34" Orientation="Vertical" Grid.Row="5" Grid.Column="5">
+                <TextBlock x:Name="CA34" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB34" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB34_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp35" Orientation="Vertical" Grid.Row="5" Grid.Column="6">
+                <TextBlock x:Name="CA35" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB35" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB35_Click"/>
+            </StackPanel>
+
+            <Line X1="0" X2="0" Y1="0" Y2="1500" StrokeThickness="2" Stroke="Gray" Grid.Row="0" Grid.Column="6" Grid.RowSpan="7"/>
+            
+            <Separator Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7" VerticalAlignment="Bottom"/>
+
+
+
+            <StackPanel x:Name="sp36" Orientation="Vertical" Grid.Row="6" Grid.Column="0">
+                <TextBlock x:Name="CA36" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB36" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB36_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp37" Orientation="Vertical" Grid.Row="6" Grid.Column="1">
+                <TextBlock x:Name="CA37" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB37" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB37_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp38" Orientation="Vertical" Grid.Row="6" Grid.Column="2">
+                <TextBlock x:Name="CA38" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB38" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB38_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="sp39" Orientation="Vertical" Grid.Row="6" Grid.Column="3">
+                <TextBlock x:Name="CA39" Text="" Tag="cal" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" Margin="8,0,0,0"/>
+                <Button x:Name="CB39" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Orange" FontSize="12" Click="CB39_Click"/>
+            </StackPanel>
+
+
+        </Grid>
+
+
+
+        <Grid x:Name="Down" Grid.Row="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+
+            </Grid.RowDefinitions>
+
+        </Grid>
+        
+        
+
+
+    </Grid>
+</Window>

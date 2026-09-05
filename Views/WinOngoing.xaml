@@ -1,0 +1,160 @@
+﻿<mah:MetroWindow xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"  
+                 x:Class="testapps.Views.WinOngoing"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="700"
+                 Height="450"
+                     ShowTitleBar="False"
+    ShowCloseButton="False"
+    WindowStyle="None"
+    ResizeMode="NoResize"
+    AllowsTransparency="True"
+    Background="#333"
+    Topmost="True" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="192"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnclose" Grid.Row="0" Content="&#xE711;" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="HoloLens MDL2 Assets" Foreground="Red" Background="#333" BorderBrush="#444" BorderThickness="1" Click="btnclose_Click" />
+
+        <Label Content="{x:Static lang:Strings.taskcompeleted}" Grid.Row="1" Foreground="Wheat" Margin="20,0,0,0"/>
+        <TextBox x:Name="txrcomment" Grid.Row="3" Text="Comment" Margin="20,5,20,10" IsEnabled="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+        <Label Content="{x:Static lang:Strings.FullName}" Grid.Row="2" Foreground="Wheat" Margin="20,5,0,0"/>
+
+        <TextBox x:Name="txtfullname" Grid.Row="2" Margin="100,5,150,10" IsReadOnly="True" />
+        <Button Content="{x:Static lang:Strings.MarkCompleted}" Grid.Row="2" HorizontalAlignment="Right"  Height="30" Margin="0,-5,20,0" Click="Button_Click" />
+
+        <DataGrid x:Name="DataGridjobs" Grid.Row="4" 
+                                                 AutoGenerateColumns="False"
+                                            CanUserAddRows="False"
+                                            CanUserDeleteRows="False"
+                                            IsReadOnly="True"
+                                            GridLinesVisibility="None"
+                                            HeadersVisibility="Column"
+                                       SelectionMode="Extended"
+                                              SelectionUnit="FullRow"
+                                        
+                                            RowHeight="40"
+                                            Margin="20"
+                                            Background="#FF2D2D2D"
+                                            Foreground="White"
+                                            VirtualizingStackPanel.IsVirtualizing="False"
+                                            BorderBrush="#FF4A4A4A" ColumnHeaderHeight="45"  CanUserResizeRows="False" SelectionChanged="DataGridjobs_SelectionChanged" >
+
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#444"/>
+                    <Setter Property="Foreground" Value="DarkGray"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="BorderBrush" Value="#666"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+
+            <DataGrid.Columns>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.ID}" Binding="{Binding idsub}" Width="110" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.date}" Binding="{Binding dayname}" Width="130">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.FullName}" Binding="{Binding customername}" Width="180">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.AssistanceServiceType}" Binding="{Binding jobcaption}" Width="250">
+
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+
+                </DataGridTextColumn>
+
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.description}" Binding="{Binding jobcomment}" Width="500" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.companyname}" Binding="{Binding CompanyName}" Width="150">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.Notes}" Binding="{Binding Notes1}" Width="500">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="{x:Static lang:Strings.Notes}" Binding="{Binding Notes2}" Width="500">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+
+
+    </Grid>
+</mah:MetroWindow>

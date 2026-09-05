@@ -1,0 +1,98 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.WinShareFolder"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="600"
+                 Height="400"
+                 WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="55"/>
+            
+        </Grid.RowDefinitions>
+
+        <ProgressBar x:Name="MyprogressBar" Height="15" Background="#333" Visibility="Hidden" BorderBrush="#444" Margin="20,0,20,0">
+            <ProgressBar.Foreground>
+                <SolidColorBrush Color="Green"/>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+
+        <Label Content="{x:Static lang:Strings.IPAddress}" Grid.Row="1" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Left"/>
+        <Label Content="{x:Static lang:Strings.ShareFoldeName}" Grid.Row="1" VerticalAlignment="Center" Margin="260,0,0,0" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtip" Text="" Grid.Row="1" VerticalAlignment="Center" Margin="100,0,2,0" BorderBrush="#444" Width="150" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtsharname" Text="" Grid.Row="1" VerticalAlignment="Center" Margin="375,0,47,0" BorderBrush="#444" />
+        <Button x:Name="BtnShareFolder" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,0,10,0" Content="&#xE721;" FontFamily="Segoe MDL2 Assets" Width="28" Height="28" Foreground="LightBlue" BorderBrush="#444"  Click="Btnshare_Click"/>
+
+
+        <ListView x:Name="FoldersListView"
+          Grid.Row="2"
+          HorizontalContentAlignment="Center"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="20" Background="#333" SelectionChanged="FoldersListView_SelectionChanged" >
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="150"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+
+                    
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
+                           FontSize="72"
+                           Text="&#xE8B7;"
+                           HorizontalAlignment="Center"/>
+
+                    
+                        <TextBlock Text="{Binding Name}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0,5,0,0"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <StackPanel Orientation="Vertical" Grid.Row="3"  >
+            <StackPanel Orientation="Horizontal"  >
+                <Label Content="{x:Static lang:Strings.FileName}" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Left"/>
+                <TextBox x:Name="txtName" Text="" Margin="30,0,0,0" Width="442"  BorderBrush="#444" IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{x:Static lang:Strings.FilePath}" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Left"/>
+
+                <TextBox x:Name="txtPath" Text="" Grid.Row="3" VerticalAlignment="Center" IsReadOnly="True" Width="442" Margin="38,6,47,0" BorderBrush="#444" />
+
+            </StackPanel>
+        </StackPanel>
+        
+        <Label Content="{x:Static lang:Strings.FilePath}" Grid.Row="4" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtFilename" Text="" Grid.Row="4" IsReadOnly="True" VerticalAlignment="Center" Margin="110,0,47,0" BorderBrush="#444" />
+        <Button x:Name="BtnShareFile" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="5,0,10,0" Content="&#xE8E5;" FontFamily="Segoe MDL2 Assets" Width="28" Height="28" Foreground="LightBlue" BorderBrush="#444"  Click="BtnFile_Click"/>
+
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Right">
+
+            <Button x:Name="BtnSent"  VerticalAlignment="Center"  Margin="5,0,5,0" Content="{x:Static lang:Strings.Transfer}" Width="78" Height="28" Foreground="LightBlue" BorderBrush="#444" Click="BtnSent_Click"  />
+            <Button x:Name="BtnCancel"  VerticalAlignment="Center"  Margin="0,0,20,0" Content="{x:Static lang:Strings.Cancel}"  Width="65" Height="28" Foreground="LightBlue" BorderBrush="#444" Click="BtnCancel_Click"  />
+
+
+        </StackPanel>
+        
+    </Grid>
+</mah:MetroWindow>

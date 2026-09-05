@@ -1,0 +1,37 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.WinInternetUserPanel"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="600"
+                 Height="400"
+                 WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock FontFamily="Segoe MDL2 Assets"  Text="&#xEA57;"  FontSize="24" Foreground="LightGreen" Margin="20,8,0,0"/>
+            <Label Content="{x:Static lang:Strings.SendMessageUserPanel}" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </StackPanel>
+        <Separator Grid.Row="1" VerticalAlignment="Top" />
+
+        <TextBox x:Name="txt" AcceptsReturn="True" Margin="20" Foreground="LightGoldenrodYellow" Grid.Row="2" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" BorderBrush="#333" />
+
+        <TextBlock x:Name="txtfullname" Grid.Row="1" Margin="20,0,60,0" Height="25" />
+        <Button x:Name="btnselect" FontFamily="Segoe MDL2 Assets"  Content="&#xE721;" VerticalAlignment="Center" Grid.Row="1" Margin="0,0,10,0" HorizontalAlignment="Right" Width="40" Click="btnselect_Click"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="5">
+            <Button x:Name="btnSave" Width="80" Foreground="White" Margin="20,0,0,0" Content="{x:Static lang:Strings.Sendmessage}"  VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#333" Click="btnSave_Click" />
+            <Button x:Name="btnCancel" Width="80" Foreground="White" Margin="5,0,0,0" Content="{x:Static lang:Strings.Cancel}"  VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#333" Click="btnCancel_Click"/>
+        </StackPanel>
+
+    </Grid>
+
+</mah:MetroWindow>

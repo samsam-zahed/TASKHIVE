@@ -1,0 +1,108 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.WinJobOption"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="600"
+                 WindowStartupLocation="CenterScreen" BorderBrush="Gray" Loaded="MetroWindow_Loaded">
+
+    <Window.Resources>
+        <Style x:Key="DarkComboboxStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="#222"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Height" Value="35"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#666"/>
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid Background="#FF333333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+
+        <Label x:Name="LabelDate" Content="{x:Static lang:Strings.Delete}" Grid.Column="0" Grid.Row="0" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock x:Name="MyDatetextbox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"  Margin="5,0,0,0"/>
+
+
+
+        <Label x:Name="LabelName" Content="{x:Static lang:Strings.FullName}" Grid.Column="0" Grid.Row="1" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+
+        <Grid  Grid.Column="1" Grid.Row="1"  >
+            <TextBlock x:Name="TextBlockName" Text=""  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="5,0,80,0"/>
+            <Button x:Name="BtnSelectClient" Width="60" HorizontalAlignment="Right" Margin="0,0,10,0" Background="#FF333333" BorderBrush="Gray" BorderThickness="1" Content="&#xE721;" FontFamily="Segoe MDL2 Assets" Foreground="White" Click="BtnSelectClient_Click" Height="35"   VerticalAlignment="Center"/>
+        </Grid>
+
+        <Label x:Name="LabelJobcaption" Content="{x:Static lang:Strings.AssistanceServiceType}"  Grid.Column="0" Grid.Row="2" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <ComboBox x:Name="ComboJobCaption" HorizontalAlignment="Stretch"  Grid.Column="1" IsEditable="False" SelectedIndex="0" Grid.Row="2" VerticalAlignment="Center" Background="#FF424242" Foreground="White" Padding="8,4" BorderBrush="Gray" BorderThickness="1" Margin="5,0,0,0">
+            <ComboBoxItem Content="{x:Static lang:Strings.HousingShelterServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.HealthMedicalServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.EducationLanguageServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.LegalImmigrationServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.EmploymentVocationalServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.SocialCulturalIntegrationServices}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.EmergencyCrisis_Services}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.OtherExtraCrisisServices}"/>
+        </ComboBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2" >
+            <Label x:Name="LabelTime" Content="{x:Static lang:Strings.Time}"  Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <TextBox x:Name="TextboxTime" Text="00:00" Width="65" VerticalAlignment="Center" TextAlignment="Center"  Foreground="White" Background="#333" Margin="5,0,0,0" BorderBrush="Gray" BorderThickness="1"/>
+
+        </StackPanel>
+
+        <Label x:Name="Labelduty" Content="{x:Static lang:Strings.ServiceWorker}" Grid.Column="0" Grid.Row="3" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <ComboBox x:Name="ComboJobList"  HorizontalAlignment="Stretch" IsEditable="True"  Grid.Column="1" SelectedIndex="0" Grid.Row="3" VerticalAlignment="Center" Background="#FF424242" Foreground="White" Padding="8,4" BorderBrush="Gray" BorderThickness="1" Margin="5,0,0,0"/>
+
+        <Label x:Name="LabelCondition" Content="{x:Static lang:Strings.ServiceStatus}" Grid.Column="0" Grid.Row="4" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+
+        <ComboBox x:Name="ComboBpxCondition" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="4"  VerticalAlignment="Center" Background="#FF424242" Foreground="White" Margin="5,0,0,0"  >
+            <ComboBoxItem Content="{x:Static lang:Strings.NotStarted}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.Ongoing}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.Completed}"/>
+            <ComboBoxItem Content="{x:Static lang:Strings.Blocked}"/>
+        </ComboBox>
+
+        <Label x:Name="LabelDes" Content="{x:Static lang:Strings.description}" Grid.Column="0" Grid.Row="5" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBox x:Name="TextboxDes"  Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Background="Transparent" Margin="5,0,15,0" BorderBrush="Gray" BorderThickness="1"/>
+
+        <CheckBox x:Name="CheckboxActive"  Grid.Column="0" Grid.Row="8" VerticalAlignment="Top" Margin="15,5,0,0" IsChecked="True">
+            <TextBlock 
+        Text="{x:Static lang:Strings.Enabledisableservicestatus}" 
+        TextWrapping="Wrap"/>
+        </CheckBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,20,0">
+            <Button x:Name="BtnSave" Content="{x:Static lang:Strings.Save}"  VerticalAlignment="Center" Height="40" Foreground="Gray" Background="#333" Width="150" BorderBrush="Gray" BorderThickness="1" Margin="0,0,5,0" Click="BtnSave_Click"/>
+
+            <Button x:Name="BtnSCancel" Content="{x:Static lang:Strings.Cancel}"   VerticalAlignment="Center" Height="40" Foreground="Gray" Background="#333" Width="150" BorderBrush="Gray" BorderThickness="1" Click="BtnSCancel_Click"/>
+        </StackPanel>
+
+    </Grid>
+</mah:MetroWindow>

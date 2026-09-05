@@ -1,0 +1,84 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.Company"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="850"
+                 Height="500"
+                 WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#333">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="35"/>
+
+        </Grid.RowDefinitions>
+
+
+        <Label Content="{x:Static lang:Strings.CompanyDescription}" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="10"/>
+
+        
+        
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+
+         
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+              
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="{x:Static lang:Strings.companyname}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyname" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="25"/>
+
+            <Label Content="{x:Static lang:Strings.address}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyaddress" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="50"/>
+
+            <Label Content="{x:Static lang:Strings.Phone}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyaPhone" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="15" PreviewTextInput="txtcopanyaPhone_PreviewTextInput"/>
+
+            <Label Content="{x:Static lang:Strings.Email}" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyaEmail" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="125"/>
+
+            <Label Content="{x:Static lang:Strings.Website}" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyaWebsite" Text="https://" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="150"/>
+
+            <Label Content="{x:Static lang:Strings.ServiceType}" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanyServiceType" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="35"/>
+
+            <Label Content="{x:Static lang:Strings.Notes}" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="txtcopanynotes" Text="No comment" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5,0,15,0" BorderBrush="Gray" MaxLength="250"/>
+
+            <Label Content="{x:Static lang:Strings.Status}" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <CheckBox x:Name="checkbox1" Content="{x:Static lang:Strings.companystatuscheckbox}" Grid.Row="7" Grid.Column="1" IsChecked="True" Margin="5,0,0,0"  />
+
+           <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right">
+                <Button x:Name="btnsave" Content="{x:Static lang:Strings.Save}"  Width="80" Margin="5,0,5,0" BorderBrush="#333" Click="btnsave_Click"/>
+                <Button x:Name="btnCancel" Content="{x:Static lang:Strings.Cancel}"  Width="80" Margin="5,0,50,0" BorderBrush="#333" Click="btnCancel_Click"/>
+            </StackPanel>
+            
+
+        </Grid>
+        
+        
+        
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,13 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.Template"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:testapps"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 Width="600"
+                 Height="400"
+                 WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- محتوای فرم -->
+    </Grid>
+</mah:MetroWindow>

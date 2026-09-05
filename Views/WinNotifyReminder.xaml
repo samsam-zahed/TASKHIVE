@@ -1,0 +1,43 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.WinNotifyReminder"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                
+             Width="700"
+    Height="250"
+    ShowTitleBar="False"
+    ShowCloseButton="False"
+    WindowStyle="None"
+    ResizeMode="NoResize"
+    AllowsTransparency="True"
+    Background="#333"
+    Topmost="True" Loaded="MetroWindow_Loaded"  >
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock FontFamily="Segoe MDL2 Assets"  Text="&#xE946;"  FontSize="24" Foreground="LightGreen" Margin="20,8,0,0"/>
+            <Label Content="{x:Static lang:Strings.Reminder}" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </StackPanel>
+        <Separator Grid.Row="1" VerticalAlignment="Top" />
+
+        <TextBox x:Name="txt"
+                   FontSize="16"
+                   IsReadOnly="True"
+                 AcceptsReturn="True"
+                   Margin="20" Foreground="LightGoldenrodYellow" Grid.Row="1" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" BorderBrush="#333" />
+
+
+        <Button x:Name="btnok" Width="80" Foreground="White" Margin="20,5,0,0" Content="{x:Static lang:Strings.Igotit}" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#333" Click="btnok_Click"/>
+
+    </Grid>
+    
+    
+</mah:MetroWindow>

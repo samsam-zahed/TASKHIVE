@@ -1,0 +1,233 @@
+﻿<mah:MetroWindow x:Class="testapps.Views.WinSelectInternetUser"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:lang="clr-namespace:TaskHive"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 Title=""
+                 WindowStartupLocation="CenterScreen" BorderBrush="Gray" Loaded="MetroWindow_Loaded"
+       Width="450"
+                 Height="450"
+                 >
+
+
+
+    <Grid Background="#FF333333">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        
+        
+        
+        
+        
+        
+        <Grid x:Name="top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+        
+            </Grid.ColumnDefinitions>
+
+            <Button Name="LabelFilter" Grid.Column="2" Height="35" Width="55" Content="&#xE721;" BorderBrush="#555" FontFamily="Segoe MDL2 Assets" Foreground="White" VerticalAlignment="Center" Margin="0,20,20,0" HorizontalAlignment="Right" Click="LabelFilter_Click"  />
+
+            <ComboBox x:Name="comboxsearch"  Grid.Column="0" SelectedIndex="2"  VerticalAlignment="Center" Width="198" Margin="20,20,0,0" Foreground="#FFBBBBBB" >
+
+                <ComboBoxItem Tag="id" Content="{x:Static lang:Strings.ID}"></ComboBoxItem>
+                <ComboBoxItem Tag="nationality" Content="{x:Static lang:Strings.nationality}"></ComboBoxItem>
+                <ComboBoxItem Tag="fname" Content="{x:Static lang:Strings.fname}"></ComboBoxItem>
+                <ComboBoxItem Tag="lname" Content="{x:Static lang:Strings.lname}"></ComboBoxItem>
+                <ComboBoxItem Tag="phone" Content="{x:Static lang:Strings.Phone}"></ComboBoxItem>
+                <ComboBoxItem Tag="personeltype" Content="{x:Static lang:Strings.gender}"></ComboBoxItem>
+
+            </ComboBox>
+
+            <TextBox x:Name="TexboxSearch" Text="" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,20,0,0" />
+        </Grid>
+
+
+        <Grid x:Name="midle" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+
+
+            <DataGrid x:Name="ClientsDataGrid" Grid.Row="1"
+                                           
+                                            AutoGenerateColumns="False"
+                                            CanUserAddRows="False"
+                                            CanUserDeleteRows="False"
+                                            IsReadOnly="True"
+                                            GridLinesVisibility="None"
+                                            HeadersVisibility="Column"
+                                       SelectionMode="Extended"
+                                              SelectionUnit="FullRow"
+                                            
+                                            RowHeight="35"
+                                            Margin="10"
+                                            Background="#FF2D2D2D"
+                                            Foreground="White"
+                                            VirtualizingStackPanel.IsVirtualizing="False"
+                                            BorderBrush="#FF4A4A4A" ColumnHeaderHeight="45"  CanUserResizeRows="False"  >
+
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#444"/>
+                        <Setter Property="Foreground" Value="DarkGray"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderBrush" Value="#666"/>
+                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+
+
+
+
+
+
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn Header="✔" Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="chkSelect"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                    <DataGridTextColumn x:Name="GridHeaderID" Header="{x:Static lang:Strings.ID}" Width="80"
+                              Binding="{Binding id}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderFname" Header="{x:Static lang:Strings.fname}" Width="110"
+                                Binding="{Binding fname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderLname" Header="{x:Static lang:Strings.lname}" Width="140"
+                           Binding="{Binding lname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderPhone" Header="{x:Static lang:Strings.Phone}" Width="100"
+                               Binding="{Binding phone}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderAge" Header="{x:Static lang:Strings.age}" Width="80"
+                             Binding="{Binding age}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderNational" Header="{x:Static lang:Strings.nationality}" Width="100"
+                           Binding="{Binding nationality}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderGender" Header="{x:Static lang:Strings.gender}" Width="160"
+                                             Binding="{Binding personeltype}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn x:Name="GridHeaderaddress" Header="{x:Static lang:Strings.Email}" Width="260"
+                                             Binding="{Binding myemail}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+
+
+
+
+
+
+
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+
+        </Grid>
+
+
+
+        <Grid x:Name="down" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <CheckBox x:Name="checkboxall" Content="{x:Static lang:Strings.selectall}" Grid.Row="0"  Foreground="White" VerticalAlignment="Center" Margin="20,0,0,0" Checked="checkboxall_Checked" Unchecked="checkboxall_Unchecked"  />
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,30,0">
+                <Button x:Name="BtnAccept" Content="{x:Static lang:Strings.OK}" Width="100" Height="35" Foreground="Gray" Margin="10,0,10,0" Click="BtnAccept_Click" />
+                <Button x:Name="BtnCancel" Content="{x:Static lang:Strings.Cancel}" Width="150" Height="35" Foreground="Gray" Click="BtnCancel_Click"/>
+            </StackPanel>
+            
+
+        </Grid>
+
+
+    </Grid>
+    
+    
+    
+</mah:MetroWindow>
