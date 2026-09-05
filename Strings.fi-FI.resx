@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Email" xml:space="preserve">
+    <value>Sähköposti</value>
+  </data>
+  <data name="WhatsApp" xml:space="preserve">
+    <value>WhatsApp</value>
+  </data>
+  <data name="wronguserandpass" xml:space="preserve">
+    <value>Käyttäjätunnus tai salasana on virheellinen.</value>
+  </data>
+  <data name="goul" xml:space="preserve">
+    <value>Korkealla huippujen yllä</value>
+  </data>
+  <data name="userisnotmatchwithemail" xml:space="preserve">
+    <value>Syötetty sähköposti ei vastaa määritettyä käyttäjää</value>
+  </data>
+  <data name="userloginnotfound" xml:space="preserve">
+    <value>Käyttäjää ei löytynyt</value>
+  </data>
+  <data name="userlogininactive" xml:space="preserve">
+    <value>Käyttäjä on passiivinen</value>
+  </data>
+  <data name="usernotfound" xml:space="preserve">
+    <value>Annetuilla tiedoilla ei löytynyt käyttäjää. Tarkista käyttäjätunnus</value>
+  </data>
+  <data name="userwrong" xml:space="preserve">
+    <value>Käyttäjätunnus tai salasana on virheellinen</value>
+  </data>
+  <data name="companyname" xml:space="preserve">
+    <value>Yrityksen nimi</value>
+  </data>
+  <data name="msgsentemail" xml:space="preserve">
+    <value>Sähköposti lähetettiin onnistuneesti. Tarkista sähköpostisi</value>
+  </data>
+  <data name="EmailCompanycodegen" xml:space="preserve">
+    <value>Yrityksen sähköpostitilin luoma 16-numeroinen salasana</value>
+  </data>
+  <data name="sendemail" xml:space="preserve">
+    <value>Lähetä sähköpostia</value>
+  </data>
+  <data name="ForgotPass" xml:space="preserve">
+    <value>Jos unohdit salasanasi, syötä sähköpostiosoitteesi, niin palautuslinkki lähetetään sinulle</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>kirjaudu sisään</value>
+  </data>
+  <data name="checkuseractive" xml:space="preserve">
+    <value>Et voi poistaa aktiivista käyttäjää. Käyttäjän poistamiseksi sinun on ensin poistettava hänet käytöstä ja sen jälkeen jatkettava poistamista</value>
+  </data>
+  <data name="EnableDes" xml:space="preserve">
+    <value>Määritä käyttäjän tila</value>
+  </data>
+  <data name="selectuser" xml:space="preserve">
+    <value>Valitse vaihtoehto luettelosta</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Ota käyttöön</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Poista käytöstä</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Tunnus</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Puhelin</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Käyttäjänimi</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Salasana</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>uusi</value>
+  </data>
+  <data name="ErrorAddUser" xml:space="preserve">
+    <value>Uuden käyttäjän lisäämiseksi sinun on ensin valittava ja vahvistettava
+olemassa olevan käyttäjän laitenumero.
+Vain käyttäjät, joilla on rekisteröity laite, voivat lisätä uusia käyttäjiä.</value>
+  </data>
+  <data name="ErroDeleteUser" xml:space="preserve">
+    <value>Luettelossa on vain yksi käyttäjä, eikä sitä voi poistaa</value>
+  </data>
+  <data name="MsgDelUser" xml:space="preserve">
+    <value>Oletko varma, että haluat poistaa tämän käyttäjän?</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Käyttäjät</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="selectcustomerregisterjob" xml:space="preserve">
+    <value>Valitse asiakas rekisteröidäksesi työn</value>
+  </data>
+  <data name="Establishconnectiondevice" xml:space="preserve">
+    <value>Muodosta yhteys laitteeseen</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiivinen</value>
+  </data>
+  <data name="itemsSuccessfully" xml:space="preserve">
+    <value>kohdetta on rekisteröity onnistuneesti</value>
+  </data>
+  <data name="Noitemselected" xml:space="preserve">
+    <value>Yhtään kohdetta ei ole valittu</value>
+  </data>
+  <data name="Weather conditions" xml:space="preserve">
+    <value>Säätila</value>
+  </data>
+  <data name="WeatherLink" xml:space="preserve">
+    <value>Säälinkki</value>
+  </data>
+  <data name="WeatherStatus" xml:space="preserve">
+    <value>Säätila</value>
+  </data>
+  <data name="Task-Management" xml:space="preserve">
+    <value>Tehtävien hallinta</value>
+  </data>
+  <data name="File-Transfer" xml:space="preserve">
+    <value>Tiedonsiirto</value>
+  </data>
+  <data name="User Login Mode" xml:space="preserve">
+    <value>Käyttäjän kirjautumistila</value>
+  </data>
+  <data name="BasicInformation" xml:space="preserve">
+    <value>Perustiedot</value>
+  </data>
+  <data name="Entemessagesend" xml:space="preserve">
+    <value>Kirjoita viesti lähetettäväksi</value>
+  </data>
+  <data name="Nonumberentered" xml:space="preserve">
+    <value>Numeroa ei ole syötetty</value>
+  </data>
+  <data name="MessageDevicdconnectedbutNoconnection" xml:space="preserve">
+    <value>Laite on liitetty tietokoneeseen, mutta sovellus ei pysty kommunikoimaan sen kanssa. </value>
+  </data>
+  <data name="DeviceConnected" xml:space="preserve">
+    <value>Laite yhdistetty</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Viestit</value>
+  </data>
+  <data name="CallMessageForm" xml:space="preserve">
+    <value>Puhelu- ja Viestilomake</value>
+  </data>
+  <data name="customeraddress" xml:space="preserve">
+    <value>Asiakkaan Osoite</value>
+  </data>
+  <data name="navigate" xml:space="preserve">
+    <value>siirry kohtaan</value>
+  </data>
+  <data name="MessageFileRestore" xml:space="preserve">
+    <value>Valitse varmuuskopiotiedoston polku palautusta varten</value>
+  </data>
+  <data name="MessageSelectPath" xml:space="preserve">
+    <value>Valitse varmuuskopiotiedostolle tiedostopolku</value>
+  </data>
+  <data name="Restoredsuccessfully" xml:space="preserve">
+    <value>Tietokanta palautettu onnistuneesti</value>
+  </data>
+  <data name="backucreatedsuccess" xml:space="preserve">
+    <value>Varmuuskopio luotu onnistuneesti</value>
+  </data>
+  <data name="Restoreded" xml:space="preserve">
+    <value>Palautus mahdollistaa tietokannan palauttamisen aiemmin luodusta varmuuskopiosta.
+Kun palautat varmuuskopion, nykyinen tietokanta korvataan varmuuskopion tiedoilla.
+Varmista, että valitset oikean varmuuskopiotiedoston ennen palauttamista</value>
+  </data>
+  <data name="backupdes" xml:space="preserve">
+    <value>Varmuuskopio luo kopion tietokannastasi ja tallentaa sen valitsemaasi sijaintiin.
+Tätä kopiota voidaan käyttää tietojen palauttamiseen, jos alkuperäinen tietokanta katoaa, vahingoittuu tai poistetaan vahingossa.
+On suositeltavaa tehdä varmuuskopioita säännöllisesti tietojen turvallisuuden varmistamiseksi</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Työkalut</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Tietoturva</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Tiedosto</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Varmuuskopio</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Palauta</value>
+  </data>
+  <data name="ADBIsInstalled" xml:space="preserve">
+    <value>ADB on jo asennettu</value>
+  </data>
+  <data name="Install" xml:space="preserve">
+    <value>Asenna</value>
+  </data>
+  <data name="InstallSKK" xml:space="preserve">
+    <value>Android SDK Platform Tools tarvitaan laitteen yhdistämiseen. Napsauta Asenna ladataksesi ja asentaaksesi sen.</value>
+  </data>
+  <data name="ADBisnotinstalled" xml:space="preserve">
+    <value>ADB ei ole asennettu tähän järjestelmään.
+Asenna Android SDK Platform Tools.</value>
+  </data>
+  <data name="Internetdisconnected" xml:space="preserve">
+    <value>Internet-yhteys katkennut</value>
+  </data>
+  <data name="Internetconnected" xml:space="preserve">
+    <value>Internet-yhteys on muodostettu</value>
+  </data>
+  <data name="Filecopiedsuccessfully" xml:space="preserve">
+    <value>Tiedosto kopioitu onnistuneesti</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>Tiedoston polku</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Siirrä</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Tiedoston nimi</value>
+  </data>
+  <data name="ShareFoldeName" xml:space="preserve">
+    <value>Jaetun kansion nimi</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP-osoite</value>
+  </data>
+  <data name="Accesscancelled" xml:space="preserve">
+    <value>Kansion käyttö peruutettiin</value>
+  </data>
+  <data name="webapplication" xml:space="preserve">
+    <value>verkkosovellus</value>
+  </data>
+  <data name="Sendmessageuser" xml:space="preserve">
+    <value>Lähetä viesti käyttäjälle</value>
+  </data>
+  <data name="sendmessagetouserinternet" xml:space="preserve">
+    <value>Voit lähettää viestejä asiakkaille tämän lomakkeen kautta</value>
+  </data>
+  <data name="ReadUnread" xml:space="preserve">
+    <value>Luettu / Lukematon</value>
+  </data>
+  <data name="SendMessageUserPanel" xml:space="preserve">
+    <value>Lähetä viesti käyttäjäpaneeliin</value>
+  </data>
+  <data name="SecurityStamp" xml:space="preserve">
+    <value>Tietoturvamerkki</value>
+  </data>
+  <data name="UserIDRegistered" xml:space="preserve">
+    <value>Käyttäjä tunnuksella on jo olemassa</value>
+  </data>
+  <data name="selectall" xml:space="preserve">
+    <value>Valitse kaikki</value>
+  </data>
+  <data name="UnableConnecttonetwork" xml:space="preserve">
+    <value>Yhteyttä verkkokansioon ei voitu muodostaa. Virhe</value>
+  </data>
+  <data name="StartdateEnddate" xml:space="preserve">
+    <value>Aloituspäivä – Päättymispäivä</value>
+  </data>
+  <data name="Searchcustomerby" xml:space="preserve">
+    <value>Hae asiakas ... perusteella</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Haku</value>
+  </data>
+  <data name="Inactiveusers" xml:space="preserve">
+    <value>Passiiviset käyttäjät</value>
+  </data>
+  <data name="officedes" xml:space="preserve">
+    <value>Tätä lomaketta käytetään toimiston asetusten määrittämiseen.
+Täällä voit syöttää ja hallita toimiston tietoja, kuten toimiston nimen, osoitteen, sähköpostin ja puhelinnumeron.
+Varmista, että kaikki tiedot ovat oikein ja ajan tasalla</value>
+  </data>
+  <data name="OfficeName" xml:space="preserve">
+    <value>Toimiston nimi</value>
+  </data>
+  <data name="Messagesendingfailed" xml:space="preserve">
+    <value>Viestin lähetys epäonnistui</value>
+  </data>
+  <data name="Messagesentsuccessfully" xml:space="preserve">
+    <value>Viesti lähetetty onnistuneesti</value>
+  </data>
+  <data name="NewSMSmessage" xml:space="preserve">
+    <value>Sinulla on uusi tekstiviesti</value>
+  </data>
+  <data name="Nodeviceconnected" xml:space="preserve">
+    <value>Laitetta ei ole yhdistetty</value>
+  </data>
+  <data name="DeviceExecuted successfully" xml:space="preserve">
+    <value>Suoritettu onnistuneesti</value>
+  </data>
+  <data name="deviceconneted" xml:space="preserve">
+    <value>Yhteys muodostettiin</value>
+  </data>
+  <data name="connect" xml:space="preserve">
+    <value>yhdistää</value>
+  </data>
+  <data name="devicedes" xml:space="preserve">
+    <value>Tämä lomake antaa sinun hallita Android-laitettasi ADB-komentojen avulla.
+Voit käynnistää tai uudelleenkäynnistää ADB-palvelimen, muodostaa yhteyden laitteeseesi ja suorittaa toimintoja, kuten sovellusten asentaminen, tiedostojen siirto tai lokien tarkastelu.</value>
+  </data>
+  <data name="deviceisnotconnect" xml:space="preserve">
+    <value>Jos laitetta ei ole kytketty, napsauta ‘Suorita’-painiketta käynnistääksesi ADB-palvelimen ja muodostaaksesi yhteyden.</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Suorita</value>
+  </data>
+  <data name="Igotit" xml:space="preserve">
+    <value>Ymmärsin</value>
+  </data>
+  <data name="ReminderAdddes" xml:space="preserve">
+    <value>Käytä tätä lomaketta asettaaksesi muistutuksen tärkeistä tehtävistäsi tai tapahtumista. Valitse päivämäärä ja aika, jotta et unohda niitä.</value>
+  </data>
+  <data name="ReminderWinDes" xml:space="preserve">
+    <value>Käytä tätä lomaketta muistutuksen asettamiseen. Voit valita päivämäärän ja ajan, jotta et unohda tärkeitä tehtäviäsi tai tapahtumia.</value>
+  </data>
+  <data name="ReminderDateTime" xml:space="preserve">
+    <value>Muistutuksen päivämäärä ja aika</value>
+  </data>
+  <data name="Reminder" xml:space="preserve">
+    <value>Muistutus</value>
+  </data>
+  <data name="WinUserDes" xml:space="preserve">
+    <value>Tätä lomaketta käytetään käyttäjien hallintaan.
+Täällä voit luoda uusia käyttäjiä, muokata tai poistaa käyttäjätietoja sekä ottaa käyttäjätilejä käyttöön tai poistaa ne käytöstä.</value>
+  </data>
+  <data name="ManageUser" xml:space="preserve">
+    <value>Käyttäjän hallinta</value>
+  </data>
+  <data name="ManageCompany" xml:space="preserve">
+    <value>Yrityksen hallinta</value>
+  </data>
+  <data name="ApplicantManagement" xml:space="preserve">
+    <value>Hakijoiden hallinta</value>
+  </data>
+  <data name="FileAttached" xml:space="preserve">
+    <value>Liitetiedosto</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Aihe</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Vastaanottaja</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Lähettäjä</value>
+  </data>
+  <data name="Selectanoptionfromthelistbelow" xml:space="preserve">
+    <value>Valitse vaihtoehto alla olevasta luettelosta jatkaaksesi</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Epäaktiivinen</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Tulos</value>
+  </data>
+  <data name="CompanyNote" xml:space="preserve">
+    <value>Yrityksen muistiinpano</value>
+  </data>
+  <data name="CustomerDescription" xml:space="preserve">
+    <value>Asiakkaan kuvaus</value>
+  </data>
+  <data name="TotalCount" xml:space="preserve">
+    <value>Yhteensä</value>
+  </data>
+  <data name="dessearchcompleted" xml:space="preserve">
+    <value>Valitse hakutyyppi luettelosta, syötä haluttu arvo kenttään ja napsauta Hae-painiketta.
+Tulokset näytetään syötetyn tekstin alun (prefiksin) perusteella</value>
+  </data>
+  <data name="MarkCompleted" xml:space="preserve">
+    <value>Merkitse valmiiksi</value>
+  </data>
+  <data name="taskcompeleted" xml:space="preserve">
+    <value>Kun tehtävä on valmis, vaihda tila Ongoing-tilasta Completed-tilaan</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Päivämäärä</value>
+  </data>
+  <data name="Sendmessage" xml:space="preserve">
+    <value>Lähetä viesti</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Viesti</value>
+  </data>
+  <data name="Phonenumber" xml:space="preserve">
+    <value>Puhelinnumero</value>
+  </data>
+  <data name="companywebsite" xml:space="preserve">
+    <value>Yrityksen verkkosivut</value>
+  </data>
+  <data name="companyphone" xml:space="preserve">
+    <value>Yrityksen puhelinnumero</value>
+  </data>
+  <data name="Savedsuccessfully" xml:space="preserve">
+    <value>Tallennettu onnistuneesti</value>
+  </data>
+  <data name="copynumber" xml:space="preserve">
+    <value>Kopioi numero</value>
+  </data>
+  <data name="Enterthephonenumberyouwant" xml:space="preserve">
+    <value>Syötä puhelinnumero, johon haluat soittaa.Voit kirjoittaa numeron tai kopioida ja liittää sen tähän.</value>
+  </data>
+  <data name="selectrequest" xml:space="preserve">
+    <value>Valitse sopimuskumppani uutta pyyntöä varten</value>
+  </data>
+  <data name="Filelarge" xml:space="preserve">
+    <value>Tiedosto on liian suuri!</value>
+  </data>
+  <data name="ViewNotifications" xml:space="preserve">
+    <value>Näytä ilmoitukset</value>
+  </data>
+  <data name="CompanySelection" xml:space="preserve">
+    <value>Yrityksen valinta</value>
+  </data>
+  <data name="Youhave" xml:space="preserve">
+    <value>Sinulla on</value>
+  </data>
+  <data name="newmessage" xml:space="preserve">
+    <value>Sinulla on uusi viesti</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Näyttää</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>Ilmoitus</value>
+  </data>
+  <data name="totalcompanies" xml:space="preserve">
+    <value>Yritysten kokonaismäärä
+</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Rekisteröintipäivämäärä</value>
+  </data>
+  <data name="Customerwinforminfo" xml:space="preserve">
+    <value>Tässä osiossa voit lisätä, muokata, poistaa ja tulostaa asiakastietoja.
+Voit myös hallita ja hakea asiakastietoja</value>
+  </data>
+  <data name="companystatuscheckbox" xml:space="preserve">
+    <value>Käytetään yrityksen aktiivisuuden määrittämiseen</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Tila</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>Verkkosivusto</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Muistiinpanot</value>
+  </data>
+  <data name="ServiceType" xml:space="preserve">
+    <value>Palvelutyyppi</value>
+  </data>
+  <data name="CompanyDescription" xml:space="preserve">
+    <value>Tässä osiossa voit rekisteröidä ja hallita yritysten ja palveluntarjoajien tietoja.
+Tiedot sisältävät yhteystiedot, osoitteet ja viestintäkanavat, ja niitä käytetään seurantaan ja yhteydenpitoon näihin organisaatioihin.</value>
+  </data>
+  <data name="areyousureyouwanttodelete" xml:space="preserve">
+    <value>Haluatko varmasti poistaa tämän kohteen?</value>
+  </data>
+  <data name="Enabledisableservicestatus" xml:space="preserve">
+    <value>Ota palvelun tila käyttöön tai poista käytöstä</value>
+  </data>
+  <data name="Pleasetypethe ServiceUserID" xml:space="preserve">
+    <value>Kirjoita palvelukäyttäjän tunnus</value>
+  </data>
+  <data name="OtherExtraCrisisServices" xml:space="preserve">
+    <value>Muut tai lisäkriisipalvelut</value>
+  </data>
+  <data name="EmergencyCrisis Services" xml:space="preserve">
+    <value>Hätä- ja kriisipalvelut</value>
+  </data>
+  <data name="SocialCulturalIntegrationServices" xml:space="preserve">
+    <value>Sosiaali- ja kotouttamispalvelut</value>
+  </data>
+  <data name="EmploymentVocationalServices" xml:space="preserve">
+    <value>Työllisyys- ja ammatilliset palvelut</value>
+  </data>
+  <data name="LegalImmigrationServices" xml:space="preserve">
+    <value>Oikeudelliset ja maahanmuuttopalvelut</value>
+  </data>
+  <data name="EducationLanguageServices" xml:space="preserve">
+    <value>Koulutus- ja kielipalvelut</value>
+  </data>
+  <data name="HealthMedicalServices" xml:space="preserve">
+    <value>Terveys- ja terveydenhuoltopalvelut</value>
+  </data>
+  <data name="HousingShelterServices" xml:space="preserve">
+    <value>Asumis- ja majoituspalvelut</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Koko nimi</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>Estetty</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Valmis</value>
+  </data>
+  <data name="Ongoing" xml:space="preserve">
+    <value>Käynnissä</value>
+  </data>
+  <data name="NotStarted" xml:space="preserve">
+    <value>Ei aloitettu</value>
+  </data>
+  <data name="FindUserID" xml:space="preserve">
+    <value>Löydä Asiakas-ID: </value>
+  </data>
+  <data name="ServiceUserID" xml:space="preserve">
+    <value>Asiakas-ID</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Aika</value>
+  </data>
+  <data name="ServiceWorker" xml:space="preserve">
+    <value>Asiakastyöntekijä</value>
+  </data>
+  <data name="ServiceUser" xml:space="preserve">
+    <value>Asiakas</value>
+  </data>
+  <data name="ServiceStatus" xml:space="preserve">
+    <value>Palvelun tila</value>
+  </data>
+  <data name="AssistanceServiceType" xml:space="preserve">
+    <value>Avustuspalvelun tyyppi</value>
+  </data>
+  <data name="listclientempty" xml:space="preserve">
+    <value>Asiakaslista on tyhjä</value>
+  </data>
+  <data name="ExporttoExcel" xml:space="preserve">
+    <value>Vie Exceliin</value>
+  </data>
+  <data name="NoImage" xml:space="preserve">
+    <value>Ei kuvaa</value>
+  </data>
+  <data name="ClientInfo" xml:space="preserve">
+    <value>Asiakastiedot</value>
+  </data>
+  <data name="printpreview" xml:space="preserve">
+    <value>Tulostuksen esikatselu</value>
+  </data>
+  <data name="Importexcelfile" xml:space="preserve">
+    <value>Tuo mallipohjatiedosto</value>
+  </data>
+  <data name="maketamplate" xml:space="preserve">
+    <value>Luo Excel-mallipohja</value>
+  </data>
+  <data name="imprtsuccess" xml:space="preserve">
+    <value>Asiakkaat tuotiin onnistuneesti</value>
+  </data>
+  <data name="excelfileempty" xml:space="preserve">
+    <value>Excel-tiedosto on tyhjä</value>
+  </data>
+  <data name="notfoundinExcelfolder" xml:space="preserve">
+    <value>ClientTemplate.xlsx-tiedostoa ei löytynyt Excel-kansiosta</value>
+  </data>
+  <data name="Excelfoldernotfound" xml:space="preserve">
+    <value>Excel-kansiota ei löytynyt</value>
+  </data>
+  <data name="Noexcelinstall" xml:space="preserve">
+    <value>Microsoft Excel ei ole asennettuna tähän tietokoneeseen tai .xlsx-tiedostoihin ei ole liitetty ohjelmaa.
+</value>
+  </data>
+  <data name="totalclients" xml:space="preserve">
+    <value>Asiakkaiden kokonaismäärä</value>
+  </data>
+  <data name="addexcel" xml:space="preserve">
+    <value>Lisää Excel-tiedostolla</value>
+  </data>
+  <data name="newtemplateoredit" xml:space="preserve">
+    <value>Valitse Yes muokataksesi olemassa olevaa mallipohjaa, tai No luodaksesi uuden.
+</value>
+  </data>
+  <data name="inactiveclient" xml:space="preserve">
+    <value>Ei-aktiiviset asiakkaa</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Päivitä</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Tulosta</value>
+  </data>
+  <data name="Excel" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="addsingleclient" xml:space="preserve">
+    <value>Luo käyttäjiä yksittäin tai useita (Excel-tiedostolla)</value>
+  </data>
+  <data name="OptionClient" xml:space="preserve">
+    <value>Valitse haluamasi toiminto.</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>Epätosi</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>Tosi</value>
+  </data>
+  <data name="Prefernottosay" xml:space="preserve">
+    <value>En halua sanoa</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Muu</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Nainen</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Mies</value>
+  </data>
+  <data name="ErrorClientIdRegistered" xml:space="preserve">
+    <value>Syötetty numero on jo rekisteröity järjestelmään</value>
+  </data>
+  <data name="nocloseaftersave" xml:space="preserve">
+    <value>Lomake pysyy avoinna tallennuksen jälkeen</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Kuvaus</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>🇫🇮 Sukupuoli</value>
+  </data>
+  <data name="notsit" xml:space="preserve">
+    <value>Valitsemalla tämän vaihtoehdon käyttäjä näkyy aktiivisena luettelossa</value>
+  </data>
+  <data name="notidtelegram" xml:space="preserve">
+    <value>Anna Telegram-tunnus ilman @-merkkiä</value>
+  </data>
+  <data name="notclientphone" xml:space="preserve">
+    <value>Voit lisätä useita puhelinnumeroita pilkulla (,) erotettuna, esimerkiksi:
+466891245,466151512,...
+Enintään 4 numeroa</value>
+  </data>
+  <data name="notclientid" xml:space="preserve">
+    <value>Syötä vain numeroita</value>
+  </data>
+  <data name="notgender" xml:space="preserve">
+    <value>Valitse sukupuolesi</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>Osoite</value>
+  </data>
+  <data name="NavigateDes" xml:space="preserve">
+    <value>Voit syöttää osoitteen manuaalisesti tai valita halutun osoitteen käyttämällä jotakin käytettävissä olevista painikkeista.</value>
+  </data>
+  <data name="NoAddressspecified" xml:space="preserve">
+    <value>Osoitetta ei ole määritetty</value>
+  </data>
+  <data name="OfficeAddress" xml:space="preserve">
+    <value>Toimiston osoite</value>
+  </data>
+  <data name="showprofile" xml:space="preserve">
+    <value>Näytä profiili</value>
+  </data>
+  <data name="nationality" xml:space="preserve">
+    <value>Kansalaisuus</value>
+  </data>
+  <data name="age" xml:space="preserve">
+    <value>Ikä</value>
+  </data>
+  <data name="lname" xml:space="preserve">
+    <value>Sukunimi</value>
+  </data>
+  <data name="fname" xml:space="preserve">
+    <value>Etunimi</value>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Kuva</value>
+  </data>
+  <data name="Personnel" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Asiakas</value>
+  </data>
+  <data name="tasklist" xml:space="preserve">
+    <value>Tehtäväluettelo</value>
+  </data>
+  <data name="office365" xml:space="preserve">
+    <value>Office 365</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Office</value>
+  </data>
+  <data name="userinfo" xml:space="preserve">
+    <value>käyttäjätiedot</value>
+  </data>
+  <data name="MsgDelete" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kohteen?</value>
+  </data>
+  <data name="situation" xml:space="preserve">
+    <value>Tilanne</value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>Valitse poistettava kohde</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="DeviceNumber" xml:space="preserve">
+    <value>Laitenumero</value>
+  </data>
+  <data name="CompanyAddress" xml:space="preserve">
+    <value>Yrityksen osoite</value>
+  </data>
+  <data name="TelegramID" xml:space="preserve">
+    <value>Telegram-tunnus</value>
+  </data>
+  <data name="EmailCompany" xml:space="preserve">
+    <value>Yrityksen sähköpostiosoite</value>
+  </data>
+  <data name="companyaddDes" xml:space="preserve">
+    <value>Syötä toimiston osoite sellaisena kuin sen tulisi näkyä Google Mapsissa.
+Tätä osoitetta käytetään reittien ja ajo-ohjeiden laskemiseen toimiston sijainnista valittuun kohteeseen henkilöstölle.
+Anna täydellinen ja tarkka osoite, jotta navigointi toimii oikein</value>
+  </data>
+  <data name="TelegramDes" xml:space="preserve">
+    <value>Syötä yrityksen Telegram-käyttäjänimi tai puhelinnumero, joka on liitetty yritystiliin.
+Tätä tietoa käytetään sovelluksen yhdistämiseen yrityksen Telegram-tiliin ja viestien hallintaan ohjelman kautta.
+Varmista, että tili on aktiivinen ja käytettävissä</value>
+  </data>
+  <data name="EmailDes" xml:space="preserve">
+    <value>Syötä yrityksen sähköpostiosoite, jota käytetään sähköpostilaatikkoon kirjautumiseen sovelluksen kautta.
+Tämä sähköpostiosoite mahdollistaa sähköpostien käytön ja hallinnan suoraan sovelluksessa.
+Varmista, että sähköpostiosoite on voimassa ja käytössä</value>
+  </data>
+  <data name="AppNumDescription" xml:space="preserve">
+    <value>Syötä puhelinnumero, jota käytetään sovelluksen yhdistämiseen matkapuhelimeesi. Tätä numeroa tarvitaan WhatsApp- ja Telegram-yhteyksiä varten. Varmista, että numero on aktiivinen ja sisältää maakoodin</value>
+  </data>
+  <data name="AppNumber" xml:space="preserve">
+    <value>Sovelluksen puhelinnumero</value>
+  </data>
+  <data name="GoogleMap" xml:space="preserve">
+    <value>Google Map</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Tallenna</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Käytä</value>
+  </data>
+  <data name="TaskJobs" xml:space="preserve">
+    <value>TaskJobs</value>
+  </data>
+  <data name="MyWebsite" xml:space="preserve">
+    <value>Verkkosivustoni</value>
+  </data>
+  <data name="PDF" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="Telegram" xml:space="preserve">
+    <value>Telegram</value>
+  </data>
+</root>
